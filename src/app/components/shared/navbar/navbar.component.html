@@ -1,0 +1,36 @@
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">Información</h4>
+          <p class="text-muted">Aplicación para consumo de la API de Spotify</p>
+          <a class="text-white" href="https://developer.spotify.com/dashboard/login" target="_blank"><p>API</p></a>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Menú</h4>
+          <li class="list-unstyled" routerLinkActive="active">
+            <a class="nav-link text-white" [routerLink]="['/home']">Últimos Lanzamientos <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="list-unstyled" routerLinkActive="active">
+            <a class="nav-link text-white" [routerLink]="['/search']">Buscar Artistas <span class="sr-only">(current)</span></a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a class="navbar-brand" >
+        <img src="assets/radio.png" width="50" height="50" alt="" loading="lazy">
+      </a>
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <strong>SPOTI-APP</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>

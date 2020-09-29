@@ -1,0 +1,17 @@
+<div class="col mb-5">
+    <div class="card">
+        <img [src]="l.images | pipesimage" class="card-img-top" alt="..." width="200" height="200">
+        <div class="card-body">
+            <h5 class="card-title">{{l.album_type}}</h5>
+            <p class="card-text">Nombre: {{l.name}}</p>
+            <div *ngIf="l.release_date">
+            <p class="card-text">Fecha de Lanzamiento: {{l.release_date}}</p>
+            </div>
+            <p class="card-text">Artistas</p>
+            <span [routerLink]="['/artista',a.id]" type="button" class="badge badge-info mr-2" *ngFor="let a of l.artists">{{a.name}}</span>
+        </div>
+        <div class="card-footer" *ngIf="l.album_type !='album' && l.album_type !='single' && l.album_type !='compilation'"> 
+            <button  [routerLink]="['/artista',l.id]" class="btn btn-outline-info btn-block">Más información</button>
+        </div>
+    </div>
+</div>

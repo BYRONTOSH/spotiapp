@@ -9,6 +9,10 @@ import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PipesimagePipe } from './pipes/pipesimage.pipe';
+import { TarjetaComponent } from './components/shared/tarjeta/tarjeta.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+
 
 
 
@@ -19,7 +23,11 @@ import { HttpClientModule } from '@angular/common/http';
     BuscadorComponent,
     ArtistaComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    PipesimagePipe,
+    TarjetaComponent,
+    LoadingComponent,
+    
   ],
   imports: [
     BrowserModule,

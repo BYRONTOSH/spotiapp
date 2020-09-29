@@ -1,1 +1,62 @@
-<p>artista works!</p>
+<h2>DETALLE DEL ARTISTA</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <span class="float-left"></span>
+        <span class="float-right">
+            <button type="button" [routerLink]="['/home']" class="btn btn-outline-info">Regresar</button>
+        </span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="bs-example" *ngFor="let a of artista">
+        <div class="card" style="max-width: auto;">
+            <div class="row no-gutters">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img [src]="a.images | pipesimage" class="card-img-top h-100" alt="...">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <h5 class="card-title">{{a.name}}</h5>
+                        <p class="card-text" > Géneros:</p>
+                        <ul *ngFor="let g of a.genres">
+                            <li>{{g | uppercase}}</li>
+                        </ul>
+                        <p class="card-text"> Popularidad:</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">{{a.popularity}} %</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row mt-5">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Album</th>
+                    <th>Canción</th>
+                    <th>Vista Previa</th>
+                </tr>
+            </thead>
+
+            <tbody *ngFor="let t of tracks">
+                <tr>
+                    <td><img [src]="t.album.images | pipesimage" width="50" height="50"></td>
+                    <td>{{t.album.name}}</td>
+                    <td>{{t.name}}</td>
+                    <td><audio [src]="t.preview_url" controls></audio></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

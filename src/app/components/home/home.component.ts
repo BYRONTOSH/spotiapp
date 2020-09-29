@@ -9,16 +9,25 @@ import { SpotiappService } from 'src/app/services/spotiapp.service';
 export class HomeComponent implements OnInit {
 
   lanzamientos: any[] = []
+  loading:boolean = true
   constructor(private _servSpoti: SpotiappService) { }
 
   ngOnInit(): void {
 
-    this._servSpoti.getNuevosLanzamientos().subscribe((res:any)=>{
-      console.log(res.albums.items[0]);
-      this.lanzamientos=res.albums.items
-    })
+    setTimeout(()=>{
+      this._servSpoti.getNuevosLanzamientos().subscribe((res:any)=>{
+        this.lanzamientos=res
+        console.log(res[0]);
+        this.loading= false
+      })
+    },400)
+      
+      
+    }
+
+      
 
     
-  }
+  
 
 }

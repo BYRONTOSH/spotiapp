@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 })
 export class SpotiappService {
   URL = 'https://api.spotify.com/v1/browse/new-releases';
-  TOKEN = 'Bearer BQAxrZylvV4O2KYwzLKWDv1wPSb0VyCu98kd0rEtHYsNEcuJJU0MEzfOLZk7DrYdNJnPIKA7dMgUcavC400';
+  TOKEN = 'Bearer BQC6ASwrzomqbLqySl99ga9aledYZP2PqnBGCbkOJ5e-gQXlkP8GlJQkgJdj7qd5w2-LjLwYxjtvjNgVfUM';
   
 
   constructor(private http: HttpClient) {}
